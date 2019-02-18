@@ -12,21 +12,24 @@ import {
 
 export interface IRibbonMenuCommandSetProperties {}
 
-export default class RibbonMenuCommandSet extends BaseListViewCommandSet<IRibbonMenuCommandSetProperties> {
+export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
+  IRibbonMenuCommandSetProperties
+> {
   @override
-  public onInit(): Promise<void> {    
+  public onInit(): Promise<void> {
     let fff = this.context;
     return Promise.resolve();
   }
 
   @override
   public onListViewUpdated(
-    event: IListViewCommandSetListViewUpdatedParameters): void {
+    event: IListViewCommandSetListViewUpdatedParameters
+  ): void {
     const compareOneCommand: Command = this.tryGetCommand("ribbonMenu");
     if (compareOneCommand) {
       compareOneCommand.visible = false;
     }
-    
+
     const element: React.ReactElement<{}> = React.createElement(commandSetMenu);
     ReactDom.render(
       element,

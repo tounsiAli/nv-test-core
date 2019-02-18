@@ -1,6 +1,6 @@
 {
   "name": "nv-test-core",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -61,11 +61,11 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tounsiAli/CoreSolution.git"
+    "url": "git+https://github.com/tounsiAli/nv-test-core.git"
   },
   "bugs": {
-    "url": "https://github.com/tounsiAli/CoreSolution/issues"
+    "url": "https://github.com/tounsiAli/nv-test-core/issues"
   },
-  "homepage": "https://github.com/tounsiAli/CoreSolution#readme",
+  "homepage": "https://github.com/tounsiAli/nv-test-core#readme",
   "keywords": []
 }
