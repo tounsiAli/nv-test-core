@@ -18,8 +18,9 @@
   },
   "dependencies": {
     "@microsoft/decorators": "~1.4.1",
+    "@microsoft/sp-application-base": "~1.4.1",
     "@microsoft/sp-core-library": "~1.4.1",
-    "@microsoft/sp-dialog": "~1.4.1",
+    "@microsoft/sp-dialog": "^1.4.1",
     "@microsoft/sp-listview-extensibility": "~1.4.1",
     "@microsoft/sp-lodash-subset": "~1.4.1",
     "@microsoft/sp-office-ui-fabric-core": "~1.4.1",

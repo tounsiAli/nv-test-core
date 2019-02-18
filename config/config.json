@@ -17,11 +17,20 @@
           "manifest": "./src/extensions/ribbonMenu/RibbonMenuCommandSet.manifest.json"
         }
       ]
+    },
+    "action-menu-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/actionMenu/ActionMenuApplicationCustomizer.js",
+          "manifest": "./src/extensions/actionMenu/ActionMenuApplicationCustomizer.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "CoreWebPartStrings": "lib/webparts/core/loc/{locale}.js",
-    "RibbonMenuCommandSetStrings": "lib/extensions/ribbonMenu/loc/{locale}.js"
+    "RibbonMenuCommandSetStrings": "lib/extensions/ribbonMenu/loc/{locale}.js",
+    "ActionMenuApplicationCustomizerStrings": "lib/extensions/actionMenu/loc/{locale}.js"
   }
 }
