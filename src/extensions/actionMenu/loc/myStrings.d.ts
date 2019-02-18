@@ -2,7 +2,7 @@ declare interface IActionMenuApplicationCustomizerStrings {
   Title: string;
 }
 
-declare module 'ActionMenuApplicationCustomizerStrings' {
+declare module "ActionMenuApplicationCustomizerStrings" {
   const strings: IActionMenuApplicationCustomizerStrings;
   export = strings;
 }

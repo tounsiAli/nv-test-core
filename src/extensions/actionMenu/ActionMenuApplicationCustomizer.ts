@@ -1,8 +1,8 @@
-import { override }                        from '@microsoft/decorators';
-import { BaseApplicationCustomizer }       from '@microsoft/sp-application-base';
-import { CoreEventEmitter }                from "../../services/CoreEventEmitter";
-import { NewItemMenuSetting }              from "../../common/coreConstants";
-import { ItemMenuSetting, MenuGroup }      from "../../common/models/SPEntities";
+import { override } from "@microsoft/decorators";
+import { BaseApplicationCustomizer } from "@microsoft/sp-application-base";
+import { CoreEventEmitter } from "../../services/CoreEventEmitter";
+import { NewItemMenuSetting } from "../../common/coreConstants";
+import { ItemMenuSetting, MenuGroup } from "../../common/models/SPEntities";
 
 /**
  * If your command set uses the ClientSideComponentProperties JSON input,
@@ -12,9 +12,9 @@ import { ItemMenuSetting, MenuGroup }      from "../../common/models/SPEntities"
 export interface IActionMenuApplicationCustomizerProperties {}
 
 /** A Custom Action which can be run during execution of a Client Side Application */
-export default class ActionMenuApplicationCustomizer
-  extends BaseApplicationCustomizer<IActionMenuApplicationCustomizerProperties> {
-
+export default class ActionMenuApplicationCustomizer extends BaseApplicationCustomizer<
+  IActionMenuApplicationCustomizerProperties
+> {
   private readonly _eventEmitter: CoreEventEmitter = CoreEventEmitter.getInstance();
   @override
   public onInit(): Promise<void> {
