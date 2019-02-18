@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.4.1",
+    "libraryName": "sharxx-core",
+    "libraryId": "8b04d861-990f-4b2b-8182-4a2d7a7f73b9",
+    "environment": "spo"
+  }
+}

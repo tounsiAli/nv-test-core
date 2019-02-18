@@ -1,0 +1,17 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx/command-set-extension-manifest.schema.json",
+
+  "id": "b7089c97-8107-49d4-88b5-47eb056fe73c",
+  "alias": "RibbonMenuCommandSet",
+  "componentType": "Extension",
+  "extensionType": "ListViewCommandSet",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "items": {
+    "ribbonMenu":{
+      "title": { "default": "Upload SB" },      
+      "type": "command"
+    }
+  }
+}

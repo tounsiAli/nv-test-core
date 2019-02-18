@@ -1,0 +1,36 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "initialPage": "http://sp2019.novacapta.local/sites/Distributor/Lists/Distributor/Inbox.aspx",
+  "api": {
+    "port": 5432,
+    "entryPath": "node_modules/@microsoft/sp-webpart-workbench/lib/api/"
+  },
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "http://sp2019.novacapta.local/sites/Distributor/Lists/Distributor/Inbox.aspx",
+      "customActions": {
+        "b7089c97-8107-49d4-88b5-47eb056fe73c": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    },
+    "ribbonMenu": {
+      "pageUrl": "http://sp2019.novacapta.local/sites/Distributor/Lists/Distributor/Inbox.aspx",
+      "customActions": {
+        "b7089c97-8107-49d4-88b5-47eb056fe73c": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    }
+  }
+}

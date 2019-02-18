@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+     <!-- CustomList -->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="100"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+        <!-- DocumentLibrary -->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="101"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!-- Survey List -->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="102"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!-- Links List -->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="103"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!-- Annoucemments List -->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="104"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--Contacts list-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="105"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--Calendar list-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="106"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--Tasks list-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="107"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--Discussion Board-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="108"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!-- PictureLibrary -->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="109"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--User information list-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="112"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--Custom Grid for a list-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="120"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--Grantt Tasks list-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="150"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+       <!-- TasksWithTimelineAndHierarchy -->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="171"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--Resources list-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="402"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--Whereabouts list-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="403"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--CallTrackingPhoneMemo-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="404"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--Circulation List-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="405"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--Timecard list-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="420"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--Holidays list-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="421"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--Externals list-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="600"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+    <!--IssueTracking list-->
+    <CustomAction
+        Title="RibbonMenu"
+        RegistrationId="1100"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
+    </CustomAction>
+
+
+
+
+</Elements>
