@@ -11,11 +11,21 @@ export class Ribbon implements EventData {
 }
 
 export class ItemMenuSetting implements EventData {
-  Id: string; //MenuComponent
-  MenuGroupType?: MenuGroup;
-  Label: string; //MenuTitle
-  Url: string; //MenuUrl
+  public Id: string; //MenuComponent
+  public MenuGroupType?: MenuGroup;
+  public  Label: string; //MenuTitle
+  public Url: string; //MenuUrl
   public IsAdding: boolean;
+  public ProjectType:IProjectType;
+
+  public constructor() {
+    this.IsAdding=true;
+  }
+}
+
+export interface IProjectType {
+  Id: string;
+  Label: string;
 }
 export enum MenuGroup {
   SettingsMenu = 1,

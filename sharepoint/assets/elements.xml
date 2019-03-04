@@ -198,8 +198,11 @@
         ClientSideComponentId="b7089c97-8107-49d4-88b5-47eb056fe73c"
         ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
     </CustomAction>
-
-
-
+    <CustomAction
+        Title="actionMenu"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="457990bb-229e-474f-8364-40f3098e30c0"
+        ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;test&quot;}">
+    </CustomAction>  
 
 </Elements>

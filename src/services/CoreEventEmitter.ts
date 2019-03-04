@@ -35,7 +35,7 @@ export class CoreEventEmitter {
 
   /**
    * Subscribes for event stream.
-   * If the event is broadcasted then handler (method)
+   * If the event is broadcasted then handler.. (method)
    * would be triggered and would receive data from the broadcasted event as method param.
    * @param name name of the event
    * @param handler event handler (method)

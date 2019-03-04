@@ -4,7 +4,7 @@ import { IContextualMenuItem,
          CommandBarButton,
          find}                                  from 'office-ui-fabric-react';
 import { CoreEventEmitter }                     from "../../../services/CoreEventEmitter";
-import { NewRibbonId }                          from "../../../common/coreConstants";
+import { NewRibbonId,NewItemMenuSetting }       from "../../../common/coreConstants";
 import { override }                             from "@microsoft/decorators";
 import { EventData }                            from "../../../common/models/EventData"; 
 import { Ribbon }                               from "../../../common/models/SPEntities";
@@ -31,8 +31,8 @@ export class commandSetMenu extends React.Component<ICommandSetMenuProperties,IC
     }
     public componentWillMount():void {
         this._eventEmitter.on(NewRibbonId,this._receiveRibbon.bind(this));
-    }
 
+    }
     @override
     public render():JSX.Element {
         
