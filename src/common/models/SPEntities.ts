@@ -15,12 +15,8 @@ export class ItemMenuSetting implements EventData {
   public MenuGroupType?: MenuGroup;
   public Label: string; //MenuTitle
   public Url: string; //MenuUrl
-  public IsAdding: boolean;
   public ProjectType: IProjectType;
 
-  public constructor() {
-    this.IsAdding = true;
-  }
 }
 
 export interface IProjectType {

@@ -2,8 +2,8 @@ import { find } from "office-ui-fabric-react";
 import { ItemMenuSetting } from "../common/models/SPEntities";
 
 export class CoreActionsLinks {
-  public items: ItemMenuSetting[];
   public readonly hasOwnProp: any = {}.hasOwnProperty;
+  private items: ItemMenuSetting[];
 
   private constructor() {
     this.items = [];
@@ -37,7 +37,13 @@ export class CoreActionsLinks {
       this.items = this.items.splice(this.items.indexOf(_item), 1);
     }
   }
+  public disposeType(data:ItemMenuSetting): void {
+    this.items=this.items.filter(i=>i.ProjectType!==data.ProjectType);
+  }
   public dispose(): void {
     this.items = [];
+  }
+  public get():ItemMenuSetting[] {
+      return this.items;
   }
 }
