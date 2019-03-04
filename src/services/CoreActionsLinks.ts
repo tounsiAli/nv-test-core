@@ -1,5 +1,5 @@
-import { ItemMenuSetting } from "../common/models/SPEntities";
 import { find } from "office-ui-fabric-react";
+import { ItemMenuSetting } from "../common/models/SPEntities";
 
 export class CoreActionsLinks {
   public items: ItemMenuSetting[];

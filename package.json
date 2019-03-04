@@ -58,6 +58,11 @@
   "directories": {
     "lib": "lib"
   },
+  "files": [
+    "bin",
+    "lib/index.js",
+    "lib"
+  ],
   "author": "amirox",
   "license": "ISC",
   "repository": {
