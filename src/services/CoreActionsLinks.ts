@@ -19,20 +19,25 @@ export class CoreActionsLinks {
     return window["CoreActionsLinks"];
   }
 
-  public insert(data:ItemMenuSetting):void {
-      let _item:ItemMenuSetting=find(this.items,i=>i.Id===data.Id&& i.MenuGroupType===data.MenuGroupType);
-      if(_item===undefined){
-          this.items.push(data);
-      }
+  public insert(data: ItemMenuSetting): void {
+    let _item: ItemMenuSetting = find(
+      this.items,
+      i => i.Id === data.Id && i.MenuGroupType === data.MenuGroupType
+    );
+    if (_item === undefined) {
+      this.items.push(data);
+    }
   }
-  public delete(data:ItemMenuSetting):void {
-    let _item:ItemMenuSetting=find(this.items,i=>i.Id===data.Id&& i.MenuGroupType===data.MenuGroupType);
-    if(_item===undefined){
-        this.items=this.items.splice(this.items.indexOf(_item),1);
+  public delete(data: ItemMenuSetting): void {
+    let _item: ItemMenuSetting = find(
+      this.items,
+      i => i.Id === data.Id && i.MenuGroupType === data.MenuGroupType
+    );
+    if (_item === undefined) {
+      this.items = this.items.splice(this.items.indexOf(_item), 1);
     }
   }
   public dispose(): void {
     this.items = [];
   }
-
 }

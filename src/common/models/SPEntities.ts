@@ -13,13 +13,13 @@ export class Ribbon implements EventData {
 export class ItemMenuSetting implements EventData {
   public Id: string; //MenuComponent
   public MenuGroupType?: MenuGroup;
-  public  Label: string; //MenuTitle
+  public Label: string; //MenuTitle
   public Url: string; //MenuUrl
   public IsAdding: boolean;
-  public ProjectType:IProjectType;
+  public ProjectType: IProjectType;
 
   public constructor() {
-    this.IsAdding=true;
+    this.IsAdding = true;
   }
 }
 
