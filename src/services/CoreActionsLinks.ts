@@ -46,21 +46,23 @@ export class CoreActionsLinks {
   public get(): ItemMenuSetting[] {
     return this.items;
   }
-  public insertFileHeader(fileUrl:string):void {
-    const isFileExist:boolean=this.checkFileExist(fileUrl);
-    if(!isFileExist){
-        const head: any = document.getElementsByTagName("head")[0] || document.documentElement;
-        const articleRedirectScriptTag: HTMLScriptElement = document.createElement("script");
-        articleRedirectScriptTag.src = fileUrl;
-        articleRedirectScriptTag.type = "text/javascript";
-        head.insertAdjacentElement("beforeEnd", articleRedirectScriptTag);
-    }    
+  public insertFileHeader(fileUrl: string): void {
+    const isFileExist: boolean = this.checkFileExist(fileUrl);
+    if (!isFileExist) {
+      const head: any =
+        document.getElementsByTagName("head")[0] || document.documentElement;
+      const articleRedirectScriptTag: HTMLScriptElement = document.createElement(
+        "script"
+      );
+      articleRedirectScriptTag.src = fileUrl;
+      articleRedirectScriptTag.type = "text/javascript";
+      head.insertAdjacentElement("beforeEnd", articleRedirectScriptTag);
+    }
   }
-  private checkFileExist(fileUrl:string):boolean {
-    const http:XMLHttpRequest =new XMLHttpRequest();
-    http.open("HEAD",fileUrl,false);
+  private checkFileExist(fileUrl: string): boolean {
+    const http: XMLHttpRequest = new XMLHttpRequest();
+    http.open("HEAD", fileUrl, false);
     http.send();
-    return http.status!==404;
-}
-
+    return http.status !== 404;
+  }
 }
