@@ -16,7 +16,7 @@ export class ItemMenuSetting implements EventData {
   public Label: string; //MenuTitle
   public Url: string; //MenuUrl
   public ProjectType: IProjectType;
-  public IsAdding?:boolean;
+  public IsAdding?: boolean;
 }
 
 export interface IProjectType {
