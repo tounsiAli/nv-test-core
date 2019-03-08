@@ -1,0 +1,36 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "core-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/core/CoreWebPart.js",
+          "manifest": "./src/webparts/core/CoreWebPart.manifest.json"
+        }
+      ]
+    },
+    "ribbon-menu-command-set": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/ribbonMenu/RibbonMenuCommandSet.js",
+          "manifest": "./src/extensions/ribbonMenu/RibbonMenuCommandSet.manifest.json"
+        }
+      ]
+    },
+    "action-menu-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/actionMenu/ActionMenuApplicationCustomizer.js",
+          "manifest": "./src/extensions/actionMenu/ActionMenuApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CoreWebPartStrings": "lib/webparts/core/loc/{locale}.js",
+    "RibbonMenuCommandSetStrings": "lib/extensions/ribbonMenu/loc/{locale}.js",
+    "ActionMenuApplicationCustomizerStrings": "lib/extensions/actionMenu/loc/{locale}.js"
+  }
+}

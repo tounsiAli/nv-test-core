@@ -1,0 +1,25 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "sharxx-core-client-side-solution",
+    "id": "8b04d861-990f-4b2b-8182-4a2d7a7f73b9",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "features": [
+      {
+        "title": "Application Extension - Deployment of custom action.",
+        "description": "Deploys a custom action with ClientSideComponentId association",
+        "id": "8fd28533-a6bb-44aa-9ae8-fd0ce5a14fb9",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/sharxx-core.sppkg"
+  }
+}
