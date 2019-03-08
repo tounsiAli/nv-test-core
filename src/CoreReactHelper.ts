@@ -7,9 +7,14 @@ export enum ReactContainersTypes {
 }
 
 export class CoreReactHelper {
-  private static readonly _placeholderElementIdPrefix: string = "lb-react-container-";
+  private static readonly _placeholderElementIdPrefix: string =
+    "lb-react-container-";
 
-  public static injectDynamicContainerElement(containerType: ReactContainersTypes, key: number, parentElement: HTMLElement): HTMLElement {
+  public static injectDynamicContainerElement(
+    containerType: ReactContainersTypes,
+    key: number,
+    parentElement: HTMLElement
+  ): HTMLElement {
     return CoreReactHelper.ensureDynamicPlaceholderContainer(
       containerType,
       key,
@@ -27,10 +32,17 @@ export class CoreReactHelper {
       containerType.toString();
     ReactDom.unmountComponentAtNode(document.getElementById(id));
   }
-  private static ensureDynamicPlaceholderContainer(type: ReactContainersTypes, key: number, rootContainer: HTMLElement): HTMLElement {
-    const id: string = CoreReactHelper._placeholderElementIdPrefix + key + type.toString();
+  private static ensureDynamicPlaceholderContainer(
+    type: ReactContainersTypes,
+    key: number,
+    rootContainer: HTMLElement
+  ): HTMLElement {
+    const id: string =
+      CoreReactHelper._placeholderElementIdPrefix + key + type.toString();
 
-    let containerDiv: HTMLElement = rootContainer.querySelector(`#${id}`) as HTMLElement;
+    let containerDiv: HTMLElement = rootContainer.querySelector(
+      `#${id}`
+    ) as HTMLElement;
     if (!containerDiv) {
       //   containerDiv.parentElement.removeChild(containerDiv);
       // }
@@ -40,7 +52,10 @@ export class CoreReactHelper {
 
       if (type === ReactContainersTypes.Ribbon) {
         //nv-sharxxCommand ms-OverflowSet-item
-        containerDiv.setAttribute("class", "nv-sharxxCommand CommandBarItem beak-anchor command");
+        containerDiv.setAttribute(
+          "class",
+          "nv-sharxxCommand CommandBarItem beak-anchor command"
+        );
         // let lastChild = rootContainer.children[rootContainer.children.length - 1];
         let lastChild = rootContainer.children[0];
         rootContainer.insertBefore(containerDiv, lastChild);
@@ -51,11 +66,24 @@ export class CoreReactHelper {
     return containerDiv;
   }
 
-  public static removeButton(type: ReactContainersTypes, key: number, rootContainer: HTMLElement) {
-    ReactDom.unmountComponentAtNode(CoreReactHelper.injectDynamicContainerElement(ReactContainersTypes.Ribbon, 0, document.querySelector(".CommandBar-mainArea") as HTMLElement));
-    const id: string = CoreReactHelper._placeholderElementIdPrefix + key + type.toString();
+  public static removeButton(
+    type: ReactContainersTypes,
+    key: number,
+    rootContainer: HTMLElement
+  ) {
+    ReactDom.unmountComponentAtNode(
+      CoreReactHelper.injectDynamicContainerElement(
+        ReactContainersTypes.Ribbon,
+        0,
+        document.querySelector(".CommandBar-mainArea") as HTMLElement
+      )
+    );
+    const id: string =
+      CoreReactHelper._placeholderElementIdPrefix + key + type.toString();
     if (rootContainer != null) {
-      let containerDiv: HTMLElement = rootContainer.querySelector(`#${id}`) as HTMLElement;
+      let containerDiv: HTMLElement = rootContainer.querySelector(
+        `#${id}`
+      ) as HTMLElement;
       if (containerDiv) {
         containerDiv.parentElement.removeChild(containerDiv);
       }
