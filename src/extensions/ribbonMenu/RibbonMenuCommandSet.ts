@@ -19,6 +19,7 @@ import { NewRibbonId } from "../../common/coreConstants";
 import { EventData } from "../../common/models/EventData";
 import { Ribbon } from "../../common/models/SPEntities";
 import { RibbonMenuLists } from "./ribbonMenuLists";
+import { CoreRibbonMenu } from "../../services/CoreRibbonMenu";
 
 export interface IRibbonMenuCommandSetProperties {}
 
@@ -27,6 +28,7 @@ export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
 > {
   private readonly _eventEmitter: CoreEventEmitter = CoreEventEmitter.getInstance();
   private ribbonMenuLists: RibbonMenuLists = new RibbonMenuLists();
+  private coreRibbonMenu:CoreRibbonMenu=CoreRibbonMenu.getInstance();
   private items: Array<IContextualMenuItem> = new Array();
   private selectedRows: ReadonlyArray<RowAccessor> = new Array();
   @override
@@ -90,12 +92,7 @@ export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
   }
 
   private _receiveRibbon(data: EventData): void {
-    // let _items:Array<IContextualMenuItem>=this.state.items;
-    // let _tempRibbons:Ribbon[]=this.state.ribbons;
-    let _tempRibbons: Ribbon[] = new Array();
-    let _ribbon: Ribbon = find(_tempRibbons, it => {
-      return it["Id"] === data.Id;
-    });
+    let _ribbon:Ribbon=this.coreRibbonMenu.getById(data.Id);
     if (_ribbon !== undefined) {
       // exist
       if (data.IsAdding) {
@@ -103,8 +100,7 @@ export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
         _ribbon.Label = data.Label;
       } else {
         // delete ribbon
-        let index: number = _tempRibbons.indexOf(_ribbon);
-        _tempRibbons.splice(index, 1);
+        this.coreRibbonMenu.delete(_ribbon);
       }
     } else {
       if (data.IsAdding) {
@@ -112,24 +108,19 @@ export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
         _ribbon = new Ribbon();
         _ribbon.Id = data.Id;
         _ribbon.Label = data.Label;
-        _tempRibbons.push(_ribbon);
+        this.coreRibbonMenu.insert(_ribbon);
       }
     }
-    // _items=this._castRibbonToContextMenu(data,_tempRibbons);
-    this.items = this._castRibbonToContextMenu(data, _tempRibbons);
+    this.items = this._castRibbonToContextMenu();
     this.createSharxxMenu();
-    // this.setState({items:_items,ribbons:_tempRibbons});
   }
-  private _castRibbonToContextMenu(
-    data: EventData,
-    _ribbons: Ribbon[]
-  ): Array<IContextualMenuItem> {
+  private _castRibbonToContextMenu( ): Array<IContextualMenuItem> {
     let _items: Array<IContextualMenuItem> = [];
-    _ribbons.forEach(rib => {
+    this.coreRibbonMenu.get().forEach(rib => {
       _items.push({
         key: rib.Id,
         name: rib.Label,
-        onClick: () => this._ribbonClick(data)
+        onClick: () => this._ribbonClick(rib)
       });
     });
     return _items;

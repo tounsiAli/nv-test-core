@@ -33,8 +33,8 @@ export class CoreActionsLinks {
       this.items,
       i => i.Id === data.Id && i.MenuGroupType === data.MenuGroupType
     );
-    if (_item === undefined) {
-      this.items = this.items.splice(this.items.indexOf(_item), 1);
+    if (_item !== undefined) {
+      this.items.splice(this.items.indexOf(_item), 1);
     }
   }
   public disposeType(data: ItemMenuSetting): void {
