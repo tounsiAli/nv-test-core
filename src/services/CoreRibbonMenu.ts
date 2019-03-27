@@ -20,19 +20,13 @@ export class CoreRibbonMenu {
   }
 
   public insert(data: Ribbon): void {
-    let _item: Ribbon = find(
-      this.ribbonCollection,
-      i => i.Id === data.Id
-    );
+    let _item: Ribbon = find(this.ribbonCollection, i => i.Id === data.Id);
     if (_item === undefined) {
       this.ribbonCollection.push(data);
     }
   }
   public delete(data: Ribbon): void {
-    let _item: Ribbon = find(
-      this.ribbonCollection,
-      i => i.Id === data.Id
-    );
+    let _item: Ribbon = find(this.ribbonCollection, i => i.Id === data.Id);
     if (_item !== undefined) {
       this.ribbonCollection.splice(this.ribbonCollection.indexOf(_item), 1);
     }
@@ -43,7 +37,7 @@ export class CoreRibbonMenu {
   public get(): Ribbon[] {
     return this.ribbonCollection;
   }
-  public getById(id:string):Ribbon {
-      return find(this.ribbonCollection,i=>i.Id===id);
+  public getById(id: string): Ribbon {
+    return find(this.ribbonCollection, i => i.Id === id);
   }
 }

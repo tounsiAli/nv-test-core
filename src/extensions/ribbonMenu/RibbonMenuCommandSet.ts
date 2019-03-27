@@ -28,7 +28,7 @@ export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
 > {
   private readonly _eventEmitter: CoreEventEmitter = CoreEventEmitter.getInstance();
   private ribbonMenuLists: RibbonMenuLists = new RibbonMenuLists();
-  private coreRibbonMenu:CoreRibbonMenu=CoreRibbonMenu.getInstance();
+  private coreRibbonMenu: CoreRibbonMenu = CoreRibbonMenu.getInstance();
   private items: Array<IContextualMenuItem> = new Array();
   private selectedRows: ReadonlyArray<RowAccessor> = new Array();
   @override
@@ -92,7 +92,7 @@ export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
   }
 
   private _receiveRibbon(data: EventData): void {
-    let _ribbon:Ribbon=this.coreRibbonMenu.getById(data.Id);
+    let _ribbon: Ribbon = this.coreRibbonMenu.getById(data.Id);
     if (_ribbon !== undefined) {
       // exist
       if (data.IsAdding) {
@@ -114,7 +114,7 @@ export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
     this.items = this._castRibbonToContextMenu();
     this.createSharxxMenu();
   }
-  private _castRibbonToContextMenu( ): Array<IContextualMenuItem> {
+  private _castRibbonToContextMenu(): Array<IContextualMenuItem> {
     let _items: Array<IContextualMenuItem> = [];
     this.coreRibbonMenu.get().forEach(rib => {
       _items.push({
