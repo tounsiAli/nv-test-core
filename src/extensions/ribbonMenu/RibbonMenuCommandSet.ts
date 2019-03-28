@@ -14,12 +14,13 @@ import {
   RowAccessor
 } from "@microsoft/sp-listview-extensibility";
 import { CoreEventEmitter } from "../../services/CoreEventEmitter";
-import { IContextualMenuItem, find } from "office-ui-fabric-react";
+import { IContextualMenuItem, find, Fabric, IconType } from "office-ui-fabric-react";
 import { NewRibbonId } from "../../common/coreConstants";
 import { EventData } from "../../common/models/EventData";
 import { Ribbon } from "../../common/models/SPEntities";
 import { RibbonMenuLists } from "./ribbonMenuLists";
 import { CoreRibbonMenu } from "../../services/CoreRibbonMenu";
+require("./components/commandSetMenu.scss");
 
 export interface IRibbonMenuCommandSetProperties {}
 
@@ -120,6 +121,13 @@ export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
       _items.push({
         key: rib.Id,
         name: rib.Label,
+        iconProps:{
+          iconType:IconType.Image,
+          imageProps:{
+            className:"am-iconRibbonMenu",
+            src:rib.Url
+          }
+        },
         onClick: () => this._ribbonClick(rib)
       });
     });
