@@ -66,8 +66,17 @@ export class CoreReactHelper {
     return containerDiv;
   }
 
-  public static removeButton(type: ReactContainersTypes, key: number, rootContainer: HTMLElement) {
-    ReactDom.unmountComponentAtNode(CoreReactHelper.injectDynamicContainerElement(ReactContainersTypes.Ribbon, 0, document.querySelector(".CommandBar-mainArea") as HTMLElement)
+  public static removeButton(
+    type: ReactContainersTypes,
+    key: number,
+    rootContainer: HTMLElement
+  ) {
+    ReactDom.unmountComponentAtNode(
+      CoreReactHelper.injectDynamicContainerElement(
+        ReactContainersTypes.Ribbon,
+        0,
+        document.querySelector(".CommandBar-mainArea") as HTMLElement
+      )
     );
     const id: string =
       CoreReactHelper._placeholderElementIdPrefix + key + type.toString();
