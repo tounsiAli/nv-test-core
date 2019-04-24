@@ -2,9 +2,13 @@
     height: 100% !important; 
     background: transparent;
 }
-.am-iconRibbonMenu {
-    height: 20px !important;
-    width: 20px !important;
-    vertical-align: middle !important;
-    margin-left: -5px;
+//.am-iconRibbonMenu{
+    // height: 20px !important;
+    // width: 20px !important;
+    // vertical-align: middle !important;
+    // margin-left: -5px;
+//}
+
+.nv-sharxxRibbonMenuItem .ms-Icon{
+    width: auto !important;
 }

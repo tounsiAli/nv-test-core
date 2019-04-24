@@ -14,7 +14,7 @@ import {
   RowAccessor
 } from "@microsoft/sp-listview-extensibility";
 import { CoreEventEmitter } from "../../services/CoreEventEmitter";
-import { IContextualMenuItem, find, Fabric, IconType } from "office-ui-fabric-react";
+import { IContextualMenuItem, find, Fabric, IconType, ImageFit } from "office-ui-fabric-react";
 import { NewRibbonId } from "../../common/coreConstants";
 import { EventData } from "../../common/models/EventData";
 import { Ribbon } from "../../common/models/SPEntities";
@@ -22,11 +22,11 @@ import { RibbonMenuLists } from "./ribbonMenuLists";
 import { CoreRibbonMenu } from "../../services/CoreRibbonMenu";
 require("./components/commandSetMenu.scss");
 
-export interface IRibbonMenuCommandSetProperties {}
+export interface IRibbonMenuCommandSetProperties { }
 
 export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
   IRibbonMenuCommandSetProperties
-> {
+  > {
   private readonly _eventEmitter: CoreEventEmitter = CoreEventEmitter.getInstance();
   private ribbonMenuLists: RibbonMenuLists = new RibbonMenuLists();
   private coreRibbonMenu: CoreRibbonMenu = CoreRibbonMenu.getInstance();
@@ -39,9 +39,7 @@ export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
   }
 
   @override
-  public onListViewUpdated(
-    event: IListViewCommandSetListViewUpdatedParameters
-  ): void {
+  public onListViewUpdated(event: IListViewCommandSetListViewUpdatedParameters): void {    
     this.selectedRows = new Array();
     this.selectedRows = event.selectedRows;
     const compareOneCommand: Command = this.tryGetCommand("ribbonMenu");
@@ -64,17 +62,9 @@ export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
   }
 
   private createSharxxMenu() {
-    CoreReactHelper.removeButton(
-      ReactContainersTypes.Ribbon,
-      0,
-      document.querySelector(".CommandBar-mainArea") as HTMLElement
-    );
+    CoreReactHelper.removeButton(ReactContainersTypes.Ribbon, 0, document.querySelector(".CommandBar-mainArea") as HTMLElement);
     let list: any = this.context.pageContext.list;
-    if (
-      this.ribbonMenuLists.lists.filter(
-        m => m.RegistrationId == list._baseTemplate
-      ).length > 0
-    ) {
+    if (this.ribbonMenuLists.lists.filter(m => m.RegistrationId == list._baseTemplate).length > 0) {
       let menuProperties: ICommandSetMenuProperties = {
         items: this.items,
         ribbonsActive: this.items.length > 0 ? false : true
@@ -82,17 +72,12 @@ export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
       let sharxxElement = React.createElement(commandSetMenu, menuProperties);
       ReactDom.render(
         sharxxElement,
-        CoreReactHelper.injectDynamicContainerElement(
-          ReactContainersTypes.Ribbon,
-          0,
-          document.querySelector(".CommandBar-mainArea") as HTMLElement
-        )
+        CoreReactHelper.injectDynamicContainerElement(ReactContainersTypes.Ribbon, 0, document.querySelector(".CommandBar-mainArea") as HTMLElement)
       );
-      var debug = 1;
     }
   }
 
-  private _receiveRibbon(data: EventData): void {
+  private _receiveRibbon(data: Ribbon): void {
     let _ribbon: Ribbon = this.coreRibbonMenu.getById(data.Id);
     if (_ribbon !== undefined) {
       // exist
@@ -109,6 +94,7 @@ export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
         _ribbon = new Ribbon();
         _ribbon.Id = data.Id;
         _ribbon.Label = data.Label;
+        _ribbon.Url = data.Url;
         this.coreRibbonMenu.insert(_ribbon);
       }
     }
@@ -116,20 +102,23 @@ export default class RibbonMenuCommandSet extends BaseListViewCommandSet<
     this.createSharxxMenu();
   }
   private _castRibbonToContextMenu(): Array<IContextualMenuItem> {
-    let _items: Array<IContextualMenuItem> = [];
+    let _items: Array<IContextualMenuItem> = new Array();
     this.coreRibbonMenu.get().forEach(rib => {
-      _items.push({
+      let item: IContextualMenuItem = {
         key: rib.Id,
         name: rib.Label,
-        iconProps:{
-          iconType:IconType.Image,
-          imageProps:{
-            className:"am-iconRibbonMenu",
-            src:rib.Url
+        iconProps: {
+          iconType: IconType.Image,
+          imageProps: {
+            src: rib.Url,
+            imageFit: ImageFit.contain,
+            width: 20,
+            height: 20,
           }
         },
         onClick: () => this._ribbonClick(rib)
-      });
+      }
+      _items.push(item);
     });
     return _items;
   }

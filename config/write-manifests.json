@@ -1,4 +1,4 @@
 {
   "$schema": "https://dev.office.com/json-schemas/spfx-build/write-manifests.schema.json",
-  "cdnBasePath": "http://sp2019.novacapta.local/sites/Distributor/CDN/Distributor"
+  "cdnBasePath": "http://sp2019.novacapta.local/sites/Distributor/CDN/Core"
 }

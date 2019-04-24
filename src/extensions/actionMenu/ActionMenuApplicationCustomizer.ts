@@ -34,6 +34,7 @@ export default class ActionMenuApplicationCustomizer extends BaseApplicationCust
     return Promise.resolve();
   }
 
+ 
   private test(): void {
     alert("test");
   }

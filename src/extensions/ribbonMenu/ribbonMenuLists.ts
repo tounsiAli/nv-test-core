@@ -18,10 +18,7 @@ export class RibbonMenuLists {
     this.lists.push({ name: "User information list", RegistrationId: 112 });
     this.lists.push({ name: "Custom Grid for a list", RegistrationId: 120 });
     this.lists.push({ name: "Grantt Tasks list", RegistrationId: 150 });
-    this.lists.push({
-      name: "TasksWithTimelineAndHierarchy",
-      RegistrationId: 171
-    });
+    this.lists.push({ name: "TasksWithTimelineAndHierarchy", RegistrationId: 171 });
     this.lists.push({ name: "Resources list", RegistrationId: 402 });
     this.lists.push({ name: "Whereabouts list", RegistrationId: 403 });
     this.lists.push({ name: "CallTrackingPhoneMemo", RegistrationId: 404 });

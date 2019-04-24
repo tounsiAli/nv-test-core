@@ -36,7 +36,8 @@ export class commandSetMenu extends React.Component<ICommandSetMenuProperties,IC
                 disabled={this.props.ribbonsActive}
                 menuProps={{
                     shouldFocusOnMount: true,
-                    items: this.props.items
+                    items: this.props.items,
+                    className: "nv-sharxxRibbonMenuItem"
                 }}
                 />
             </div>
